@@ -64,11 +64,22 @@ Below are the results for our models ranked by their F1-scores in correctly pred
    
 | **Model Type**            | **F1-Score**  |
 |---------------------------|---------------|
-| **k-NN**                  | 0.588         |
+| **k-NN(k=3)**                  | 0.588         |
 | **Logistic Regression**   | 0.509         |
 | **Random Forest**         | 0.702         |
 | **XGBoost**               | 0.51          |
 
+2. **Regression Problem**
+   
+| **Model Type**            | **R2-Score**  |
+|---------------------------|---------------|
+| **k-NN(k=49)**            | 0.296         |
+| **Bagging Regressor**     | 0.299         |
+| **Random Forest**         | 0.447         |
+| **Gradient Boosting**     | 0.515         |
+| **Adaptative Boosting**   | 0.446         |
+| **XGBoost Regressor**     | 0.399         |
+| **MPL Regressor**         | XXX           |
 
 
 ## Conclusion 📊
@@ -79,23 +90,16 @@ Through comprehensive analysis, the project reveals critical insights:
 
 ## Project Structure 📁
 
-- `analyisis/`:
-    - `final_analyisis.ipynb`: Jupyther Notebook created to analyse data.
-- `data/`: csv with for our analysis
+- `data/`: csv's generated for our different analysis
     - `cleaning_data.ipynb`: Jupyther Notebook to clean our data.
     - `cleaning_functions.py`: python folder with fuctions
-    - `df_clean_all.csv`: data.
-    - `df_final_demo`: data.
-    - `df_final_experiment_client.txt`: origin data
-    - `df_final_web_data_pt_1.txt`: origin data
-    - `df_final_web_data_pt_2.txt`: origin data
+    - `spotify_clean.csv`: data cleaned and 'popularity_class' column creation.
+    - `spotify_clean_reg.csv`: data cleaned
+    - `spotify_clean_reg_without_outliers`: data cleaned and with no outliers
+    - `SpotifyFeatures`: original data
 
-- `graph/`: some graph for our visualization
-
-- `visualization/`:
-    
-  - `date_time_min.pbix`: Power BI folder.
-
+- `EDA/`: Exploratory Data Analisis
+- `ML/`: Exploration of different ML model types
 - `presentation/`:  Folder to store PDF presentations.
 - `README.md`: File to describe the project and how to set it up.
 
