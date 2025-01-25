@@ -107,6 +107,7 @@ The project findings are summarized in a detailed presentation, covering:
 - 📋 Research goals and methodology.
 - 🔍 Key insights and trends.
 - 📊 Data visualizations and treatment analysis.
+- 🤖 Best predictive model
 
 
 
