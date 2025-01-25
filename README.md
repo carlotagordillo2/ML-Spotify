@@ -61,6 +61,7 @@ TBD
 Below are the results for our models ranked by their F1-scores in correctly predicting popular songs:
 
 1. **Classification Problem**
+   
 | **Model Type**            | **F1-Score**  |
 |---------------------------|---------------|
 | **k-NN**                  | 0.588         |
