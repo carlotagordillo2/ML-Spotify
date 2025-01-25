@@ -61,12 +61,12 @@ TBD
 Below are the results for our models ranked by their F1-scores in correctly predicting popular songs:
 
 # Classification Problem
-| **Model Type**         | **F-1 Score**  |
-|------------------------|------------------|
-| **Logistic Regression** | 0.66 🎯         |
-| **XGBoost**             | 0.65            |
-| **Random Forest**       | 0.60            |
-| **Dummy Classifier**    | 0.51            |
+| **Model Type**            | **F1-Score**  |
+|---------------------------|---------------|
+| **k-NN**                  | 0.588         |
+| **Logistic Regression**   | 0.509         |
+| **Random Forest**         | 0.702         |
+| **XGBoost**               | 0.51          |
 
 
 
