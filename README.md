@@ -68,6 +68,7 @@ Below are the results for our models ranked by their F1-scores in correctly pred
 | **Logistic Regression**   | 0.509         |
 | **Random Forest**         | 0.702         |
 | **XGBoost**               | 0.51          |
+| **MPL Classification**    | 0.54          |
 
 2. **Regression Problem**
    
@@ -79,11 +80,19 @@ Below are the results for our models ranked by their F1-scores in correctly pred
 | **Gradient Boosting**     | 0.515         |
 | **Adaptative Boosting**   | 0.446         |
 | **XGBoost Regressor**     | 0.399         |
-| **MPL Regressor**         | XXX           |
+| **MPL Regressor**         | 0.33          |
+
+
+2. **Classification Problem with only two classes: *Popular* and *No Popular***
+| **Model Type**            | **F1-Score**  |
+|---------------------------|---------------|
+| **Random Forest**         | 0.834         |
 
 
 ## Conclusion 📊
 Through comprehensive analysis, the project reveals critical insights:
+ - The best model was: *Random Forest*.
+ - We need balance model to achieve the best predictions.
 
 
 
