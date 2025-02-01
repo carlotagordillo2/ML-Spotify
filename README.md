@@ -84,6 +84,7 @@ Below are the results for our models ranked by their F1-scores in correctly pred
 
 
 2. **Classification Problem with only two classes: *Popular* and *No Popular***
+
 | **Model Type**            | **F1-Score**  |
 |---------------------------|---------------|
 | **Random Forest**         | 0.834         |
