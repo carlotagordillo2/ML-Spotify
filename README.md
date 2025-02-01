@@ -6,10 +6,13 @@ The goal of this project is to develop a machine learning model capable of predi
 
 
 **Insights from our study**
-TBD
+Through this analysis, we identified some key factors that influence the popularity of a song on Spotify, such as tempo, genre, and duration. By analyzing these variables, we were able to discern patterns that contribute to a song's success.
 
-- **Objective**: 
-- **Focus Areas**: EDA & Machine Learning models
+- **Objective**:
+  The primary objective of this project was to build a predictive model that can anticipate a song's popularity on Spotify based on its musical features. By doing so, we aim to offer insights into what makes a song more likely to become popular.
+- **Focus Areas**: 
+   - **Exploratory Data Analysis (EDA):** Analyzing and understanding the data to uncover patterns and trends.
+   - **Machine Learning Models:** Applying different ML algorithms to predict the popularity of songs and determine which features have the most significant impact.
 
 
 
@@ -17,8 +20,21 @@ TBD
 
 ## Functionality ⚙️
 
-- 🧹 **Data Structure**: 
-- 📈 **Data Visualization**: 
+- 🧹 **Data Structure**: We have the following variables:
+  - *Danceability:* Measure of how danceable the song is, based on rhythm, stability, beat strength and regularity (0 to 1).
+  - *Energy:* Perceived level of intensity and activity of the song. High values represent fast and loud songs (0 to 1).
+  - *Valence:* Emotional positivity of the song. High values indicate positivity (joy, euphoria), low values indicate sadness (0 to 1).
+  - *Tempo:* Estimated tempo of the song in beats per minute (BPM).
+  - *Intrumentalness:* Estimated tempo of the song in beats per minute (BPM).Predicts the amount of vocal elements in a song. Higher values indicate more instrumentals (0 to 1).
+  - *Loudness:* Overall track volume in decibels (dB). Generally ranges from -60 to 0 dB.
+  - *Popularity*: Measure of how popular the song is (0 to 100).
+  - *Key:* Pitch of the song represented as an integer (0 = Do, 1 = Do#, ... 11 = Si).
+  - *Mode:* Song mode: Major (1) or Minor (0).
+  - *Speechiness:* Number of spoken words in the song. High values indicate spoken content (such as podcasts).
+  - *Acoustiness:* Probability that the track is acoustic. Higher values indicate more acoustic content (0 to 1).
+  - *Liveness:* The likelihood that the song was recorded live. Higher values indicate a more ‘live’ environment (0 to 1).
+  - *Duration_ms*: Song duration in milliseconds. 
+
 
 ## Tools Used 🛠️
 
@@ -83,7 +99,7 @@ Below are the results for our models ranked by their F1-scores in correctly pred
 | **MPL Regressor**         | 0.33          |
 
 
-2. **Classification Problem with only two classes: *Popular* and *No Popular***
+3. **Classification Problem with only two classes: *Popular* and *No Popular***
 
 | **Model Type**            | **F1-Score**  |
 |---------------------------|---------------|
@@ -96,20 +112,32 @@ Through comprehensive analysis, the project reveals critical insights:
  - We need balance model to achieve the best predictions.
 
 
+## Streamlit 
 
+Video
 
 ## Project Structure 📁
 
 - `data/`: csv's generated for our different analysis
-    - `cleaning_data.ipynb`: Jupyther Notebook to clean our data.
-    - `cleaning_functions.py`: python folder with fuctions
     - `spotify_clean.csv`: data cleaned and 'popularity_class' column creation.
     - `spotify_clean_reg.csv`: data cleaned
-    - `spotify_clean_reg_without_outliers`: data cleaned and with no outliers
     - `SpotifyFeatures`: original data
 
 - `EDA/`: Exploratory Data Analisis
+  - `aux_functions.py`: python file with auxiliar functions to clean and EDA
+  - `starting.ipynb`: Jupyter Notebook to clean the data and do EDA
 - `ML/`: Exploration of different ML model types
+   - `app.py`: streamlit app for classification model
+   - `app_1.py`: streamlit app for classification model with only two classes
+   - `mlp_nn_regression.ipynb`: Jupyter Notebook with regression model using neural networks
+   - `model_classification_grid_search.ipynb`: Jupyter Notebook with classification model using Grid Search
+   - `model_classification_two_classes.ipynb`: Jupyter Notebook with classification model with only two classes using Random Forest
+    - `model_final_classification.ipynb`: Jupyter Notebook with classification model with 5 classes appying all models
+   - `model_regression.ipynb`: Jupyter Notebook with regression model appying all models
+   - `modelo_random_forest_1.pkl`: the best model to classification model with two classes
+   - `normalizer.pkl`: the best model to  normalizer the classification model with five classes
+   - `normalizer1.pkl`: the best model to  normalizer the classification model with two classes
+   - `pca_model.pkl`: the best model to reduce dimension in the classification model with five classes
 - `presentation/`:  Folder to store PDF presentations.
 - `README.md`: File to describe the project and how to set it up.
 
