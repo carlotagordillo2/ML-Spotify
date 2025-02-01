@@ -34,7 +34,12 @@ def predecir_popularidad(features):
     
     # Predecir con Random Forest
     prediccion = rf_model.predict(features_norm)
-    return prediccion[0]
+    
+    if (prediccion[0] == 1):
+        resultado = 'Éxito! Preparate para ser el próximo Bad Bunny💥'
+    else:
+        resultado = 'Parece que no serás el próximo hit del verano... ¡pero no te preocupes, reajusta tu composición y da lo mejor de ti! 🎯'
+    return resultado
 
 # Función para transformar las entradas del usuario
 def transformar_entradas(key, time_signature, mode):
@@ -58,9 +63,9 @@ def transformar_entradas(key, time_signature, mode):
     return key_numeric, time_signature_numeric, mode_numeric
 
 # Interfaz de la app
-st.title("🎵 Predicción de Popularidad de Canciones con Random Forest")
+st.title("🎵🔥💃 ¿Hit del verano o canción de ascensor? 🤷‍♂️🎧💤")
 
-st.subheader("Ingrese las características de la canción:")
+st.subheader("Ingrese las características de tu canción:")
 
 # Widgets con valores guardados en session_state
 st.session_state.danceability = st.slider("Danceability", 0.0, 1.0, st.session_state.danceability)
@@ -77,8 +82,9 @@ st.session_state.key = st.selectbox("Key", ['C#', 'F#', 'C', 'F', 'G', 'E', 'D#'
 st.session_state.time_signature = st.selectbox("Time Signature", ['4/4', '5/4', '3/4', '1/4', '0/4'], index=['4/4', '5/4', '3/4', '1/4', '0/4'].index(st.session_state.time_signature))
 st.session_state.mode = st.selectbox("Mode", ['Major', 'Minor'], index=['Major', 'Minor'].index(st.session_state.mode))
 
+st.markdown('💃<h5 style="font-size: 14px;">¿Llenarás la pista o solo el ascensor? Dale al botón y mira qué pasa!</h5> 😂🎵', unsafe_allow_html=True)
 # Botón para predecir
-if st.button("Predecir Popularidad"):
+if st.button('Precide popularidad'):
     key_numeric, time_signature_numeric, mode_numeric = transformar_entradas(st.session_state.key, st.session_state.time_signature, st.session_state.mode)
     
     features = [
