@@ -114,7 +114,8 @@ Through comprehensive analysis, the project reveals critical insights:
 
 ## Streamlit 
 
-Video
+
+![Visualización de Power BI](spotifyrecomendations.gif)
 
 ## Project Structure 📁
 
